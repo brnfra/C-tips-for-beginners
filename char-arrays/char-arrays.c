@@ -11,7 +11,7 @@
  *       Compiler:  gcc
  *
  *         Author:  BRUNO FRANCO (https://github.com/brnfra/), devlabbr@gmail.com
- *   Organization:  
+ *         Made by VIM ;D
  *
  * =====================================================================================
  */
@@ -27,7 +27,7 @@
 #include <math.h>
 #include <locale.h>
 #endif
-
+// Aux Procedures{{{
 //clean screen
 void clrscr()
 {
@@ -39,7 +39,8 @@ void clear()
 {
     while ( getchar() != '\n' );
 }
-
+// }}}
+/* Arrays manipulations{{{  */
 //copia valor de orig  na variavel dest 
 void strCopy(char *dest, char *orig) {
     int i; 
@@ -62,9 +63,8 @@ return i;
 int isNull(char *s){
     return ( s[0] == '\0' );
 }
-
-//void strConcat()
-//void strConcat()
+/*}}}*/
+//void strConcat() next
 //teste cadastro {{{
 int Teste_cadastro() {
 
@@ -88,10 +88,10 @@ strCopy(sexod,sexoo);
     return 0;
 
 }
+/*}}}*/
 //  teste questionário {{{
 int Teste_questionario(){
-
-     int pts=0;
+    int pts=0;
     char resposta;
 
     printf("%s","\nTESTE DE Questionário . Responda as perguntas com (S)im ou (N)ão;\n");
@@ -107,19 +107,18 @@ int Teste_questionario(){
             resposta=resposta + 32;
         };
         if(resposta == 's'){
-            pts = pts + FEBRE;
             printf("Respondeu SIM\n"); 
+            pts+=100;
         }else{
             printf("Respondeu NAO\n"); 
         }
         printf("Teste de while %c\n",resposta);
-        printf("Pontos de risco - %i\n",pts); 
+        printf("Pontos - %i\n",pts); 
     }while((resposta == 's' )||(resposta == 'n'));
    
     return 0;
 }
 ///}}}
-/*}}}*/
 
 /*     Constants       */
 #define EXIT_SUCCESS 0
@@ -130,10 +129,6 @@ int main(int argc, char *argv[]) {
     /*     Your Program Here!      */
     clrscr();
     Teste_cadastro();
-   
-#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
-        system("pause");return (EXIT_SUCCESS);
-#elif __linux__
+    Teste_questionario(); 
     return EXIT_SUCCESS;
-#endif
 }
