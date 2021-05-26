@@ -1,5 +1,5 @@
 # C-tips-for-beginners
-My path throught C language learning and tips about begin to learn C programming language
+My path through C language learning and tips about begin to learn C programming language
 
 ## Basic Arrays manipulation 
 
@@ -9,9 +9,9 @@ My path throught C language learning and tips about begin to learn C programming
 
 ## Stdin solve undesired behavior
 
-- Implement clear 'Enter' from keyboard input
+- Cleaning 'Enter' from keyboard input after command
 
 ## Terminal flow
 
-- Implement system pause without halt system
-- Implement clear(visual) terminal on program execution
+- Implement system pause without halting system
+- Implement terminal cleaning(visual) on program execution
