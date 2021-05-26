@@ -15,18 +15,12 @@
  *
  * =====================================================================================
  */
-#include <stdlib.h>
-#if defined(WIN32) || defined(_WIN32) ||  defined(__WIN32__) || defined(__NT__)
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
-#elif __linux__
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <locale.h>
-#endif
+
+#define EXIT_SUCCESS 0
 //https://stackoverflow.com/questions/7898215/how-to-clear-input-buffer-in-c
 void clear()
 {
@@ -105,7 +99,6 @@ void test_with_clear(){
 }
 
 /*     Constants       */
-#define EXIT_SUCCESS 0
 int main(int argc, char *argv[]) {
 
     /*     Your Program Here!      */
@@ -115,7 +108,6 @@ int main(int argc, char *argv[]) {
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
         system("pause");return (EXIT_SUCCESS);
 #elif __linux__
-#define EXIT_SUCCESS 0
     return EXIT_SUCCESS;
 #endif
 }

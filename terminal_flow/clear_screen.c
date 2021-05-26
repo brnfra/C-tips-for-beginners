@@ -1,15 +1,25 @@
-#if defined(WIN32) || defined(_WIN32) ||  defined(__WIN32__) || defined(__NT__)
+/*
+ * =====================================================================================
+ *
+ *       Filename:  clear_screen.c
+ *
+ *    Description: Simple to clear screen 
+ *
+ *        Version:  1.0
+ *        Created:  26/05/2021 19:21
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  Bruno Franco (brnfra), devlabbr@gmail.com
+ *   Organization:  
+ *
+ * =====================================================================================
+ */
+#include <stdlib.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
-setlocale(LC_ALL,"Portuguese");
-#elif __linux__
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <locale.h>
-#endif
 
 /*     Constants       */
 #define EXIT_SUCCESS 0
@@ -29,7 +39,6 @@ int main(int argc, char *argv[]) {
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
         system("pause");return (EXIT_SUCCESS);
 #elif __linux__
-#define EXIT_SUCCESS 0
     return EXIT_SUCCESS;
 #endif
 }

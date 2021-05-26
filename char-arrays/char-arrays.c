@@ -15,18 +15,10 @@
  *
  * =====================================================================================
  */
-#if defined(WIN32) || defined(_WIN32) ||  defined(__WIN32__) || defined(__NT__)
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <locale.h>
-#elif __linux__
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <locale.h>
-#endif
 // Aux Procedures{{{
 //clean screen
 void clrscr()
