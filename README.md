@@ -9,7 +9,7 @@ My path through C language learning and tips about begin to learn C programming 
 
 ## Stdin solve undesired behavior
 
-- Cleaning 'Enter' from keyboard input after command
+- Cleaning 'Enter'( \n ) from keyboard input after command
 
 ## Terminal flow
 
